@@ -37,7 +37,7 @@ const Register = ({ onSwitchToLogin }) => {
 
     try {
       const { confirmPassword, ...registerData } = formData;
-      const response = await authAPI.register(registerData);
+      await authAPI.register(registerData);
       
       setSuccess('Registration successful! Your account is now active and you can log in.');
       setFormData({
